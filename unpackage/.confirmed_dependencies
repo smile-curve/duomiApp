@@ -1,0 +1,50 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"aa.html",
+			"img/new1.png",
+			"img/banner.jpg",
+			"img/new4.png",
+			"img/new2.png",
+			"img/new3.png",
+			"img/b1.jpg",
+			"img/b3.jpg",
+			"img/11.jpg",
+			"img/a2.jpg",
+			"img/e1.jpg",
+			"img/b5.jpg",
+			"img/d1.jpg",
+			"img/a3.jpg",
+			"img/a1.jpg",
+			"img/b7.jpg",
+			"img/b8.jpg",
+			"img/22.jpg",
+			"img/b10.jpg",
+			"img/b6.jpg",
+			"img/33.jpg",
+			"img/a4.jpg",
+			"img/b9.jpg",
+			"img/c1.jpg",
+			"img/b4.jpg",
+			"img/b2.jpg",
+			"fonts/iconfont.woff",
+			"css/iconfont.css",
+			"img/img.jpg",
+			"css/mui.css",
+			"img/flag.jpg"
+		],
+		"refer": [
+			"aa.html"
+		]
+	},
+	"aa.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	}
+}

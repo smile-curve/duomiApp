@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />    
+    <title>播放页</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>	
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>   
+    <script type="text/javascript" charset="utf-8">   
+      	/*document.addEventListener("plusready",function(){
+      		var link=document.getElementsByClassName("link")[0];      	
+      		link.onclick=function(){
+      			var obj=plus.webview.create("index.html","");
+      			obj.show("slide-in-right");
+      		}
+      	})*/
+      	function resize(originSize,type){
+			type=type||"x";
+			if(type=="x"){
+				var widths=document.documentElement.clientWidth;
+				var scale=originSize/widths*100+"px";
+			}else if(type=="y"){
+				var heights=document.documentElement.clientHeight;
+				var scale=originSize/heights*100+"px";
+			}
+			document.getElementsByTagName("html")[0].style.fontSize=scale;
+		}
+		window.onload=function(){
+			resize(750);
+			var widths=document.documentElement.clientWidth+"px";
+			var heights=document.documentElement.clientHeight+"px";
+			$("body").css({
+				width:widths,
+				height:heights
+			})
+			$(".swiper-container").css({
+				width:widths,
+				height:heights
+			})
+			
+			var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			    loop: false,
+			    pagination: '.swiper-pagination'
+			})        
+		}
+    </script>    
+    <style>
+    	body{
+    		background: url(img/bg.png);
+    		background-size: 100%;
+    	} 
+    	.mask{
+    		width: 100%;height: 100%;
+    		position: absolute;
+    		background: url(img/mask.png); 
+    		background-size:100% ;
+    	}    	
+    	.swiper-wrapper{
+    		height: 100%;
+    	}
+    	.swiper-slide{
+    		height: 100%;
+    	}
+    	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		    top: 60px;
+		    bottom: 0;
+		}
+    	.header{
+    		position: fixed;
+    		top: 10px;
+    		width: 100%;height: 60px;
+    		z-index: 10;
+    	}
+    	.header .left{
+    		padding-left: 10px;
+    		height: 100%;
+    		line-height: 60px;
+    		color: #fff;
+    		float: left;
+    	}
+    	.header .fonts{
+    		height: 100%;
+    		float: left;
+    		padding-left: 10px;
+    	}
+    	.header .fonts .title{
+    		padding-top: 10px;
+    		font-size: 20px;
+    		color: #fff;
+    		font-weight: bold;
+    	}
+    	.header .fonts .name{
+    		font-size: 14px;
+    		color: #363B3B;
+    		font-weight: bold;
+    	}
+    	.header .right1{
+    		float: right;
+    		line-height: 60px;
+    		padding-right: 10px;
+    		color: #fff;
+    	}
+    	.header .right2{
+    		float: right;
+    		line-height: 60px;
+    		padding-right: 20px;
+    		color: #fff;
+    	}
+    	.naying{
+    		width: 100%;height: 30%;
+    		margin-top: 30%;
+    		background: url(img/naying.png) no-repeat;
+    		background-size:100% ;
+    	}
+    	.fan{
+    		widows: 100%;height: 20%;
+    		background: url(img/fan.png);
+    		background-size:100% ;
+    	}
+    	.img{
+    		width: 90%;
+    		height: 50%;
+    		margin-top: 100px;
+    		margin-left: 5%;
+    		background: url(img/naying.jpg);
+    		background-size: 100%;
+    		z-index: 999;
+    	}    	
+    	.icon{
+    		width: 100%;
+    		background: red;
+    		margin-top: 55px;
+    		z-index: 999;
+    	}
+    	.icon .left{
+    		float: left;
+    		padding-left: 5%;
+    		color: #fff;
+    	}
+    	.icon .right{
+    		float: right;
+    		padding-right: 5%;
+    		color: #fff;
+    	}
+    	.progress{
+    		width: 100%;height: 50px;
+    		position: absolute;
+    		bottom: 10%;
+    		background: url(img/progress.png) no-repeat;
+    		background-size: 100%;
+    		z-index: 999;
+    	}
+    	.geci{
+    		margin-top: 30%;
+    	}
+    	.geci p{
+    		text-align: center;
+    		line-height: 30px;    		
+    		color: #FBFCFC;
+    		font-size: 18px;
+    	}
+    	
+    	
+    	nav{
+    		width: 100%;height: 70px;
+    		position: fixed;
+    		bottom: -10px;
+    		background: url(img/foot.jpg);
+    		background-size: 100%;
+    		color: #fff;
+    		line-height: 80px;
+    		z-index: 999;
+    	}
+    	nav .loop{
+    		float: left;
+    		padding-left: 5%;
+    	}
+    	nav .up{
+    		float: left;
+    		padding-left: 10%;
+    	}
+    	nav .center{
+    		width: 6%;height: 90%;
+    		float: left;
+    		position: absolute;
+    		left: 0;right: 0;
+    		margin: 0 auto; 
+    		line-height: 70px;   
+    	}
+    	nav .down{
+    		float: right;
+    		padding-right: 10%;
+    	}
+    	nav .share{
+    		float: right;
+    		padding-right: 5%;
+    	}
+    	
+    	
+    </style>
+</head>
+<body>	
+	<div class="header">
+		<div class="left">
+			<a href="index.html">
+				<span class="mui-icon mui-icon-arrowleft"></span>
+			</a>
+		</div>
+		<div class="fonts">
+			<div class="title">默</div>
+			<div class="name">那英</div>
+		</div>
+		<div class="right1">
+			<span class="mui-icon mui-icon-list"></span>
+		</div>
+		<div class="right2">
+			<span class="mui-icon iconfont icon-gamebar" style="font-size:25px"></span>
+		</div>
+	</div>
+	
+	<div class="mask"></div>
+	
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    	<div class="swiper-slide">
+	        	<div class="naying"></div>
+	        	<div class="fan"></div>
+	        	<div class="progress"></div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="img"></div>
+	        	<div class="icon">
+	        		<div class="left">
+	        			<span class="mui-icon iconfont icon-xiazai" style="font-size:30px"></span>
+	        		</div>
+	        		<div class="right">
+	        			<span class="mui-icon iconfont icon-woxihuande" style="font-size:30px"></span>
+	        		</div>
+	        	</div>
+	        	<div class="progress"></div>
+	        </div>
+	  		<div class="swiper-slide">
+	    		<div class="geci">
+	    			<p>默-那英</p>
+		    		<p>电影<<何以笙萧默>>主题曲</p>
+		    		<p>词：尹军</p>
+		    		<p style="#1BF1F1;">曲：钱雷</p>
+		    		<p>忍不住化身一条固执的鱼</p>
+		    		<p>逆着洋流独自游到底</p>
+		    		<p>年少时候虔诚发过的誓</p>
+		    		<p>沉默地沉默在深海里</p>
+		    		<p>重温几次</p>
+		    		<p>结局还是失去你</p>		    		
+	    		</div>	    		
+	        	<div class="progress"></div>
+	        </div>
+	    </div>
+	    <div class="swiper-pagination"></div>	    
+	</div>
+	
+	<nav>
+		<div class="loop">
+			<span class="mui-icon iconfont icon-xunhuan" style="font-size: 30px;"></span>			
+		</div>
+		<div class="up">
+			<span class="mui-icon iconfont icon-shangyishou" style="font-size: 30px;"></span>
+		</div>
+		<div class="center">
+			<span class="mui-icon iconfont icon-zantingbofang" style="font-size: 25px;"></span>
+		</div>
+		<div class="share">
+			<span class="mui-icon iconfont icon-fenxiang" style="font-size: 30px;"></span>
+		</div>
+		<div class="down">
+			<span class="mui-icon iconfont icon-xiayishou" style="font-size: 30px;"></span>
+		</div>
+	</nav>
+	
+</body>
+</html>

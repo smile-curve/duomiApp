@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("plusready",function(){
+      		var link=document.getElementsByClassName("link")[0];      	
+      		link.onclick=function(){
+      			var obj=plus.webview.create("index.html","");
+      			obj.show("slide-in-right");
+      		}
+      	})
+	</script>
+	<style>
+		.mui-input-group{
+			width: 90%;
+			top: 30px;
+			left: 5%;
+			border-radius: 10px;
+		}
+		.icon{
+			width: 80px;height: 80px;
+			margin-left: 13px;
+			line-height: 100px;
+			border-radius: 50%;
+			color: #fff;
+		}
+		.icon span{
+			font-size: 50px;
+		}
+		.duomi{
+			width: 55%;height: 20px;
+			margin-top: 50px;
+			margin-left: 22%;
+		}
+		.duomi a{
+			color: #EC5181;
+			font-size: 18px;
+		}
+		.duomi a:nth-child(1){
+			padding-right: 5px;
+			border-right: 2px solid #949494;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left link"></a>
+	    <h1 class="mui-title">登录多米</h1>
+	</header>
+	<div class="mui-content">
+	    <form class="mui-input-group">
+		    <div class="mui-input-row">
+		        <label>用户名</label>
+		    	<input type="text" class="mui-input-clear" placeholder="请输入用户名">
+		    </div>
+		    <div class="mui-input-row">
+		        <label>密码</label>
+		        <input type="password" class="mui-input-password" placeholder="请输入密码">
+		    </div>
+		    <div class="mui-button-row">
+		        <button type="button" class="mui-btn mui-btn-primary" style="background:#BFBFBF;border:#BFBFBF">登录</button>
+		    </div>
+		</form>
+		
+		<ul class="mui-table-view mui-grid-view" style="margin-top: 80px;background: rgba(0,0,0,0);border: 0;">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		        <a href="#">
+		        	<div class="icon" style="background: #49C2F1;">
+		        		<span class="mui-icon mui-icon-qq"></span>
+		        	</div>
+		            <div class="mui-media-body">QQ登录</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		        <a href="#">
+		        	<div class="icon" style="background: #FF8635;">
+		        		<span class="mui-icon mui-icon-weibo"></span>
+		        	</div>
+		            <div class="mui-media-body">微博登录</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		        <a href="#">
+		        	<div class="icon" style="background: #69D34B;">
+		        		<span class="mui-icon mui-icon-weixin"></span>
+		        	</div>
+		            <div class="mui-media-body">微信登录</div>
+		        </a>
+		    </li>
+		</ul>
+		
+		<div class="duomi">
+			<a href="reg.html">注册多米账号</a>
+			<a href="">忘记密码</a>
+		</div>
+		
+	</div>
+</body>	
+</html>
